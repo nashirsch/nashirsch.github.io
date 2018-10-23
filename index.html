@@ -1,6 +1,7 @@
 <script>
 var url = 'resume.pdf';
 var pdfjsLib = window['pdfjs-1/build/pdf'];
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdfjs-1/build/pdf.worker.js'
 var doc = pdfjsLib.getDocument(url).then(function(pdf) {
 
   pdf.getPage(1).then(function(page) {
