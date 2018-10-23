@@ -1,6 +1,6 @@
 <script>
 var url = 'resume.pdf';
 var pdfjsLib = window['pdfjs-1/build/pdf'];
-
+pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
 var doc = pdfjsLib.getDocument(url);
 </script>
